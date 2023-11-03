@@ -13,7 +13,7 @@ android {
     defaultConfig {
         applicationId "com.example.movieapitask"
         minSdk 24
-        targetSdk 33
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 
@@ -67,6 +67,9 @@ dependencies {
     debugImplementation 'androidx.compose.ui:ui-tooling'
     debugImplementation 'androidx.compose.ui:ui-test-manifest'
 
+    implementation "androidx.lifecycle:lifecycle-runtime-compose:2.6.2"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2"
+
     //Dagger - Hilt
     implementation "com.google.dagger:hilt-android:2.48"
     kapt "com.google.dagger:hilt-android-compiler:2.48"
@@ -84,9 +87,9 @@ dependencies {
     // Kotlin Extensions and Coroutines support for Room
     implementation "androidx.room:room-ktx:2.6.0"
 
-    // Pager
-    implementation "com.google.accompanist:accompanist-pager:0.30.1"
-    implementation "com.google.accompanist:accompanist-pager-indicators:0.30.1"
+    // Paging
+    implementation "androidx.paging:paging-runtime-ktx:3.2.1"
+    implementation "androidx.paging:paging-compose:3.3.0-alpha02"
 
     // Compose navigation
     implementation "androidx.navigation:navigation-compose:2.7.4"
