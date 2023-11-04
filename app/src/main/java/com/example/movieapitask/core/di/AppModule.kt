@@ -1,6 +1,7 @@
 package com.example.movieapitask.core.di
 
 import android.app.Application
+import androidx.paging.ExperimentalPagingApi
 import androidx.room.Room
 import com.example.movieapitask.feature_movie_app.data.local.MovieDatabase
 import com.example.movieapitask.feature_movie_app.data.remote.MovieApi
@@ -15,6 +16,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
+@OptIn(ExperimentalPagingApi::class)
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {

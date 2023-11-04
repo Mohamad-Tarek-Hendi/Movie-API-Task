@@ -1,5 +1,8 @@
 package com.example.movieapitask.feature_movie_app.data.repository
 
+import android.net.http.HttpException
+import android.os.Build
+import androidx.annotation.RequiresExtension
 import com.example.movieapitask.core.constant.Resource
 import com.example.movieapitask.feature_movie_app.data.local.MovieDao
 import com.example.movieapitask.feature_movie_app.data.mapper.toMovies
@@ -9,7 +12,6 @@ import com.example.movieapitask.feature_movie_app.domain.model.movie.Movies
 import com.example.movieapitask.feature_movie_app.domain.repository.MovieRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
-import retrofit2.HttpException
 import java.io.IOException
 
 class MovieRepositoryImpl(
@@ -17,6 +19,7 @@ class MovieRepositoryImpl(
     private val movieDao: MovieDao
 ) : MovieRepository {
 
+    @RequiresExtension(extension = Build.VERSION_CODES.S, version = 7)
     override suspend fun getMoviesResult(
         category: String,
         fetchFromRemote: Boolean
@@ -71,4 +74,3 @@ class MovieRepositoryImpl(
     }
 
 }
-

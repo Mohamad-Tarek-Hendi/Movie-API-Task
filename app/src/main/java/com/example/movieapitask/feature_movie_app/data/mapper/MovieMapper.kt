@@ -8,7 +8,6 @@ import com.example.movieapitask.feature_movie_app.domain.model.movie.Movies
 
 fun MoviesDto.toMoviesEntity(): MovieEntity {
     return MovieEntity(
-
         page = page,
         results = results,
         totalPagesNumber = totalPagesNumber,
