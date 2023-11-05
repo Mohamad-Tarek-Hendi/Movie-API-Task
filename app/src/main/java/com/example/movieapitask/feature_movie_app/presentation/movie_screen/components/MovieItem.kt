@@ -24,7 +24,6 @@ import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import com.example.movieapitask.R
 import com.example.movieapitask.feature_movie_app.domain.model.movie.MovieResult
-
 @Composable
 fun MovieItem(
     movieResult: MovieResult,

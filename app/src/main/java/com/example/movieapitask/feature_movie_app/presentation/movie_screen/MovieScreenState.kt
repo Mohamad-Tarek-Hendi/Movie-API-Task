@@ -8,4 +8,3 @@ data class MovieScreenState(
     val isLoading: Boolean = false,
     val error: String = ""
 )
-
